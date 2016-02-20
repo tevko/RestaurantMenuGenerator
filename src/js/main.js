@@ -14,7 +14,7 @@
 				title: undefined,
 				sections: []
 			},
-			menuWorker: new Worker('/dist/js/worker.js')
+			menuWorker: new Worker('/build/js/worker.js')
 		},
 		init() {
 			const s = this.settings;

@@ -1,0 +1,24 @@
+{
+  "short_name": "Menu Generator",
+  "name": "Free Restaurant Menu Generator",
+  "icons": [
+    {
+      "src": "/img/menu_icon_128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/menu_icon_256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/menu_icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "landscape"
+}

@@ -5,71 +5,101 @@
 
         <title>Restaurant Menu Generator - Build complete responsive HTML Restaurant Menus for Free!</title>
 
+        <meta name="description" content="Generate clean, responsive, and free HTML restaurant menus to use anywhere!">
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="/dist/css/styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
 
+        <link rel="stylesheet" href="/build/css/main.css">
+
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="favicon.ico" rel="shortcut icon" type="image/ico">
+
      </head>
+	<body>
 
-    <button class="_JS_reset">Reset Menu</button>
+		<main>
 
-    <h1>Restaurant Menu Generator</h1>
+		    <button class="_JS_reset">Reset Menu</button>
 
-    <section class="menu_preview _JS_menuPreview"></section>
+		    <h1>Restaurant Menu Generator</h1>
 
-    <form class="form">
-        <div class="form_checkBox">
-            <input type="checkbox" name="raw" id="raw" class="rawInput">
-            <label class="_JS_containsRaw rawLabel" for="raw" checked="false">Click if menu contains raw or undercooked items</label>
-        </div>
-        <div class="form_fieldBlock group">
-            <input type="text" data-identifier="restaurantName">
-            <label>What is the name of the restaurant?</label>
-        </div>
+		    <section class="menu_preview _JS_menuPreview"></section>
 
-        <div class="form_fieldBlock group">
-            <input type="text" placeholder="Breakfast, Lunch, Dinner, Desert, Seasonal, etc." data-identifier="menuTitle"/>
-            <label>What is the title of the menu?</label>
-        </div>
+		    <form class="form">
+		        <div class="form_checkBox">
+		            <input type="checkbox" name="raw" id="raw" class="rawInput">
+		            <label class="_JS_containsRaw rawLabel" for="raw" checked="false">Click if menu contains raw or undercooked items</label>
+		        </div>
+		        <div class="form_fieldBlock group">
+		            <input type="text" data-identifier="restaurantName">
+		            <label>What is the name of the restaurant?</label>
+		        </div>
 
-        <button class="_JS_addSection">Add a Menu Section</button>
-    </form>
+		        <div class="form_fieldBlock group">
+		            <input type="text" placeholder="Breakfast, Lunch, Dinner, Desert, Seasonal, etc." data-identifier="menuTitle"/>
+		            <label>What is the title of the menu?</label>
+		        </div>
 
-    <div class="saveMenu _JS_downloadMenu">
-        <button>Save Menu</button>
-    </div>
+		        <button class="_JS_addSection">Add a Menu Section</button>
+		    </form>
 
-    <template id="_JS_menuSection">
-        <section class="form_menuSection _JS_menuSectionContainer _JS_deleteAble absContainer deleteUI">
-            <span class="delete _JS_deleteButton">x</span>
-            <div class="form_fieldBlock _JS_menuSection group">
-                <input type="text" placeholder="Steak, Chicken, Fish, Vegan (just kidding)" data-identifier="menuSection" required/>
-                <label>Enter a Section</label>
+		    <div class="saveMenu _JS_downloadMenu">
+		        <button>Save Menu</button>
+		    </div>
 
-                <button class="_JS_addItem">Add Menu Item</button>
-            </div>
-        </section>
-        <button class="_JS_addSection">Add Another Section</button>
-    </template>
+		</main>
 
-    <template id="_JS_menuItem">
-        <section class="_JS_menuItemContainer _JS_deleteAble absContainer deleteUI form_menuItem">
-            <span class="delete _JS_deleteButton">x</span>
-            <div class="form_fieldBlock _JS_menuItem group">
-                <input type="text" placeholder="Salmon, Ribeye, Cobb Salad" data-identifier="menuItem"/>
-                <label>Enter a Menu Item</label>
-            </div>
-            <div class="form_fieldBlock _JS_menuItem group">
-                <input type="text" placeholder="$5.99" data-identifier="menuItemPrice"/>
-                <label>Enter the Price</label>
-            </div>
-            <div class="form_fieldBlock _JS_menuItem group">
-                <textarea placeholder="Dry Aged for 48 days and topped with gargonzola..." data-identifier="menuItemDesc"></textarea>
-                <label>Enter the Item Description</label>
-            </div>
-        </section>
-        <button class="_JS_addItem">Add Menu Item</button>
-    </template>
-    <script src="/dist/js/main.js"></script>
+	    <footer class="app-footer">
+	    	<p>This application exists to help you build an HTML food menu. It's entirely free too! Just fill out the form options and click the "Save Menu" button when you are done. You can even see a preview of your current progress at any time by clicking on the preview window on the upper right hand corner of your screen. The menu you create will be saved in your browser until you click the "Reset Menu" button in the top left hand corner of your screen.</p>
+
+	    	<p>Nothing you enter into this form will ever be saved anywhere, except for on your own computer. All of the work is done on your browser which means there is no need for any of your information to go to a server.</p>
+
+	    	<p>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+	    </footer>
+
+	    <template id="_JS_menuSection">
+	        <section class="form_menuSection _JS_menuSectionContainer _JS_deleteAble absContainer deleteUI">
+	            <span class="delete _JS_deleteButton">x</span>
+	            <div class="form_fieldBlock _JS_menuSection group">
+	                <input type="text" placeholder="Steak, Chicken, Fish, Vegan (just kidding)" data-identifier="menuSection" required/>
+	                <label>Enter a Section</label>
+
+	                <button class="_JS_addItem">Add Menu Item</button>
+	            </div>
+	        </section>
+	        <button class="_JS_addSection">Add Another Section</button>
+	    </template>
+
+	    <template id="_JS_menuItem">
+	        <section class="_JS_menuItemContainer _JS_deleteAble absContainer deleteUI form_menuItem">
+	            <span class="delete _JS_deleteButton">x</span>
+	            <div class="form_fieldBlock _JS_menuItem group">
+	                <input type="text" placeholder="Salmon, Ribeye, Cobb Salad" data-identifier="menuItem"/>
+	                <label>Enter a Menu Item</label>
+	            </div>
+	            <div class="form_fieldBlock _JS_menuItem group">
+	                <input type="text" placeholder="$5.99" data-identifier="menuItemPrice"/>
+	                <label>Enter the Price</label>
+	            </div>
+	            <div class="form_fieldBlock _JS_menuItem group">
+	                <textarea placeholder="Dry Aged for 48 days and topped with gargonzola..." data-identifier="menuItemDesc"></textarea>
+	                <label>Enter the Item Description</label>
+	            </div>
+	        </section>
+	        <button class="_JS_addItem">Add Menu Item</button>
+	    </template>
+	    <script src="/build/js/main.js"></script>
+	    <script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/serviceworker.js').then(function(registration) {
+				// Registration was successful
+				console.log('ServiceWorker registration successful with scope: ',    registration.scope);
+			});
+		}
+	    </script>
+
+    </body>
 </html>

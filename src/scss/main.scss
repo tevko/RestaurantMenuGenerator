@@ -1,5 +1,12 @@
 body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
 	margin: 3em;
+	flex: 1;
 	@media (max-width: 785px) {
 		margin: 1em;
 	}
@@ -48,13 +55,15 @@ html {
 }
 
 .saveMenu {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	right: 13px;
 	height: 30px;
 	text-align: center;
-	background-color: navy;
+	background-color: #336385;
+	left: 0;
+	top: 10px;
+	width: 175px;
+	margin: 0 auto;
+	position: absolute;
 	button {
 		display: inline-block;
 		border: none;
@@ -319,5 +328,22 @@ section.deleteUI {
 .firstSection {
 	.form_menuItem:not(.firstItem) {
 		max-width: 100%;
+	}
+}
+
+.app-footer {
+	padding: 15px;
+	padding-top: 25px;
+	background-color: #E1E1E1;
+	color: #000;
+	p {
+		font-size: 13px;
+		font-style: italic;
+		max-width: 1000px;
+		margin: 0 auto;
+		margin-bottom: 1em;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
 	}
 }

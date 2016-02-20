@@ -53,7 +53,7 @@ self.addEventListener('message', e => {
     			border-top: 1px dotted black;
     			margin-top: -20px;
 			}
-			footer {
+			footer:not(.app-footer) {
 				text-align: center;
     			font-size: 11px;
 				font-style: italic;
