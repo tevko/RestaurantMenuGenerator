@@ -1,6 +1,7 @@
 {
   "short_name": "Menu Generator",
   "name": "Free Restaurant Menu Generator",
+  "start_url": "./?utm_source=web_app_manifest",
   "icons": [
     {
       "src": "/img/menu_icon_128.png",
@@ -18,7 +19,8 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/index.html",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
   "display": "standalone",
-  "orientation": "landscape"
+  "orientation": "portrait"
 }
