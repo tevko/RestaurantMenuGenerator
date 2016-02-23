@@ -166,7 +166,6 @@
 			return false
 		},
 		insertMenuDetails(field, target, collection, value) {
-			//const parentIdentifier = this.findParentAttribute('data-menusection', target);
 			const itemIdentifier = this.findParentAttribute('data-menuitem', target);
 			collection.sections.some(obj => {
 				return obj.items.some(item => {
@@ -196,11 +195,16 @@
 			const content = data;
 			const blob = new Blob([data], {type: 'text/html'});
 			const url = window.URL.createObjectURL(blob);
-    		document.body.appendChild(a);
-    		a.style = 'display: none';
-			a.href = url;
-			a.download = fileName;
-			a.click();
+    		const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (isSafari) {
+				window.location = url;
+			} else {
+				document.body.appendChild(a);
+				a.style = 'display: none';
+				a.href = url;
+				a.download = fileName;
+				a.click();
+			}
 		},
 		restoreSavedMenu() {
 			const s = this.settings;

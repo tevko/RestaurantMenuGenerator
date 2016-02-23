@@ -1,5 +1,5 @@
 // The files we want to cache
-var CACHE_NAME = 'site-cache-v1';
+var CACHE_NAME = 'site-cache-v2';
 var urlsToCache = [
   '/',
   '/build/css/main.css',
@@ -18,6 +18,7 @@ self.addEventListener('install', function(event) {
 	);
 });
 
+//return cache if nothing has changed
 self.addEventListener('fetch', function(event) {
 	event.respondWith(
 		caches.match(event.request)
@@ -28,6 +29,21 @@ self.addEventListener('fetch', function(event) {
 			}
 
 			return fetch(event.request);
+		})
+	);
+});
+
+//delete old cache
+this.addEventListener('activate', function(event) {
+	var cacheWhitelist = ['site-cache-v2'];
+
+	event.waitUntil(
+		caches.keys().then(function(keyList) {
+			return Promise.all(keyList.map(function(key) {
+				if (cacheWhitelist.indexOf(key) === -1) {
+					return caches.delete(key);
+				}
+			}));
 		})
 	);
 });
