@@ -195,15 +195,15 @@
 			const content = data;
 			const blob = new Blob([data], {type: 'text/html'});
 			const url = window.URL.createObjectURL(blob);
-    		const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-			if (isSafari) {
-				window.location = url;
-			} else {
+
+			try {
 				document.body.appendChild(a);
 				a.style = 'display: none';
 				a.href = url;
 				a.download = fileName;
 				a.click();
+			} catch (e) {
+				window.location = url;
 			}
 		},
 		restoreSavedMenu() {
