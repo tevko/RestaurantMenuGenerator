@@ -1,5 +1,5 @@
 // The files we want to cache
-var CACHE_NAME = 'site-cache-v3';
+var CACHE_NAME = 'site-cache-v4';
 var urlsToCache = [
   '/',
   '/build/css/main.css',
