@@ -203,7 +203,7 @@
 				a.download = fileName;
 				a.click();
 			} catch (e) {
-				window.location = url;
+				window.location.assign(url);
 			}
 		},
 		restoreSavedMenu() {
