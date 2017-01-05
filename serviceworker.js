@@ -35,7 +35,7 @@ self.addEventListener('fetch', function(event) {
 
 //delete old cache
 this.addEventListener('activate', function(event) {
-	var cacheWhitelist = ['site-cache-v2'];
+	var cacheWhitelist = [CACHE_NAME];
 
 	event.waitUntil(
 		caches.keys().then(function(keyList) {
